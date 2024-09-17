@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Recommendations</title>
+    <style>
+        /* Add some crazy styling to make it look wild */
+        body {
+            background-image: url("https://wpassets.brainstation.io/app/uploads/2017/04/13100509/Netflix-Background.jpg"); /* New background image */
+            background-size: cover; /* Cover the entire background */
+            font-family: 'Pacifico', cursive; /* Fancy font */
+            color: #fff; /* White text to contrast with dark background */
+        }
+        
+        h1 {
+            text-shadow: 0 0 10px #333; /* Darker shadow to contrast with dark background */
+            font-size: 36px; /* Large title */
+            text-align: center;
+        }
+        
+        ul {
+            list-style: none; /* Remove bullet points */
+            padding: 0;
+            margin: 0;
+            display: flex; /* Make the list items display horizontally */
+            flex-wrap: wrap; /* Allow the list items to wrap to the next line */
+            justify-content: center; /* Center the list items */
+        }
+        
+        li {
+            margin: 20px; /* Add some space between recommendations */
+            width: calc(20% - 40px); /* Set the width of each list item */
+            display: flex; /* Make the image and text display vertically */
+            flex-direction: column; /* Make the image and text display vertically */
+            align-items: center; /* Center the image and text horizontally */
+            background-color: rgba(255, 255, 255, 0.8); /* White background with opacity to contrast with dark background */
+            border: 1px solid #ddd; /* Light gray border */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
+        
+        img {
+            width: 100%; /* Set the image width to 100% of the list item */
+            height: auto; /* Set the image height to auto to maintain aspect ratio */
+            border-radius: 10px; /* Add a slight rounded corner effect */
+            object-fit: cover; /* Make the image cover the entire width and height */
+        }
+        
+        p {
+            font-size: 18px; /* Set text size */
+            color: rgb(54, 54, 54); /* White text to contrast with dark background */
+            margin-top: 10px; /* Add some space between the image and text */
+            text-align: center; /* Center the text horizontally */
+        }
+        
+        /* Add a hover effect to the images */
+        img:hover {
+            transform: scale(1.1); /* Scale up the image on hover */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Add a more prominent shadow */
+            cursor: pointer; /* Change cursor to a pointing hand */
+        }
+        
+        /* Add a hover effect to the list items */
+        li:hover {
+            background-color: rgba(255, 255, 255, 0.9); /* Light gray background on hover with opacity */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Add a more prominent shadow */
+        }
+        
+        /* Style the "No movie found" message */
+       .no-movies {
+            font-size: 40px; /* Larger text size */
+            color: #fff; /* White text to contrast with dark background */
+            text-align: center; /* Center the text horizontally */
+            padding: 20px; /* Add some space around the message */
+            border: 1px solid #ddd; /* Light gray border */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
+    </style>
+</head>
+<body>
+    <h1>Movie Recommendations</h1>
+    {% if recommendations %}
+        {% if recommendations == "No movie found" %}
+        <div class="no-movies">Sorry! We don't have similar movies to recommend for your movie. Please try other movie!</div>
+        {% else %}
+            <ul>
+                {% for recommendation in recommendations %}
+                    <li>
+                        <img src="{{ recommendation.1 }}" alt="{{ recommendation.0 }}">
+                        <p>{{ recommendation.0 }}</p>
+                        <p>OTT platform: {{ recommendation.2 }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endif %}
+</body>

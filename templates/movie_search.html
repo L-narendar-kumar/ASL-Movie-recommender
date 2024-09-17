@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Recommender</title>
+    <style>
+        /* Add some crazy styling */
+        body {
+            background-image: url("https://wpassets.brainstation.io/app/uploads/2017/04/13100509/Netflix-Background.jpg"); /* Netflix background image */
+            background-size: cover; /* Cover the entire background */
+            font-family: 'Pacifico', cursive; /* Fancy font */
+        }
+        
+        h1 {
+            color: #fff; /* White title */
+            text-shadow: 0 0 10px #ff69b4; /* Pink shadow */
+            font-size: 36px; /* Large title */
+        }
+        
+        form {
+            max-width: 500px; /* Limit form width */
+            margin: 40px auto; /* Center form */
+            padding: 20px; /* Add some padding */
+
+            background-color: rgba(0, 0, 0, 0.5); /* Dark transparent background */
+            border: 1px solid #ddd; /* Light gray border */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
+        
+        input[type="radio"] {
+            margin: 10px; /* Add some space between radio buttons */
+            color: white;
+        }
+        
+        input[type="text"] {
+            width: 100%; /* Full-width text input */
+            padding: 10px; /* Add some padding */
+            font-size: 18px; /* Large text */
+            border: 1px solid #ccc; /* Light gray border */
+            border-radius: 5px; /* Rounded corners */
+        }
+        
+        button[type="submit"] {
+            background-color: #33cc33; /* Green background */
+            color: #fff; /* White text */
+            padding: 10px 20px; /* Add some padding */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Change cursor to a pointing hand */
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #228822; /* Darker green background on hover */
+        }
+        
+        .myButton {
+            background-color: #ff69b4; /* Pink background */
+            color: #fff; /* White text */
+            padding: 10px 20px; /* Add some padding */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Change cursor to a pointing hand */
+            margin: 10px; /* Add some space between buttons */
+        }
+        
+        .myButton:hover {
+            background-color: #ff99cc; /* Lighter pink background on hover */
+        }
+        .radio{
+            color: whitesmoke;
+            text-decoration-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter a Movie Title or Genre</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="radio" name="search_type" value="title" checked class="radio"><span style="color: #ffffff;">Movie Title</span>
+        <input type="text" name="movie_title" placeholder="Movie Title"><br><br>
+        
+        <button type="submit">Get Recommendations</button> <br> <br>
+
+
+        <input type="radio" name="search_type" value="genre" class="radio"><span style="color: #ffffff;">Genre</span>
+        <input type="text" name="genre" placeholder="Genre" id="genre"><br><br>
+
+        <button class="myButton">Action</button>
+        <button class="myButton">Adventure</button>
+        <button class="myButton">Thriller</button> <br> <br>
+        <button class="myButton">comedy</button>
+        <button class="myButton">science fiction</button>
+        <button class="myButton">romance</button> <br> <br>
+        <button class="myButton">fantasy</button>
+        <button class="myButton">crime</button>
+        <button class="myButton">drama</button> <br> <br>
+
+
+        <button type="submit">Get Recommendations</button>
+    </form>
+    <script>
+        const input = document.getElementById("genre");
+        const buttons = document.querySelectorAll(".myButton");
+
+        buttons.forEach(button => {
+            button.addEventListener("click", function () {
+                input.value = button.textContent;
+            });
+        });
+    </script>
+</body>
+</html>

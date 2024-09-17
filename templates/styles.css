@@ -1,0 +1,266 @@
+/* Add some crazy styling */
+body {
+    background-image: url("https://wpassets.brainstation.io/app/uploads/2017/04/13100509/Netflix-Background.jpg");
+    /* Netflix background image */
+    background-size: cover;
+    /* Cover the entire background */
+    font-family: 'Pacifico', cursive;
+    /* Fancy font */
+}
+
+h1 {
+    color: #fff;
+    /* White title */
+    text-shadow: 0 0 10px #ff69b4;
+    /* Pink shadow */
+    font-size: 36px;
+    /* Large title */
+}
+
+form {
+    max-width: 500px;
+    /* Limit form width */
+    margin: 40px auto;
+    /* Center form */
+    padding: 20px;
+    /* Add some padding */
+
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Dark transparent background */
+    border: 1px solid #ddd;
+    /* Light gray border */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
+}
+
+input[type="radio"] {
+    margin: 0px;
+    /* Add some space between radio buttons */
+
+}
+
+
+.btn-gradient-20 {
+    border: 5em;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+    padding: 0.7em 2em;
+    border-radius: 65px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+    -webkit-transition: box-shadow 0.25s;
+    transition: box-shadow 0.25s;
+    color:
+        white;
+}
+
+.btn-gradient-20 .text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:
+        transparent;
+    background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+}
+
+.btn-gradient-20:after {
+    content: "";
+    border-radius: 18px;
+    position: absolute;
+    margin: 4px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background:
+        #0e0e10;
+}
+
+.btn-gradient-20:hover {
+    background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+    box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+}
+
+.btn-gradient-20:hover .text {
+    background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+}
+
+.wrap-input-8 .input {
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    background-color:
+        #f5f6fd;
+    border: 1px solid #ccc;
+    padding: 7px 14px 9px;
+    transition: 0.4s;
+}
+
+.wrap-input-8 .input:focus {
+    outline: none;
+}
+
+.wrap-input-8 {
+    width: 80%;
+    margin: 20px 3%;
+    position: relative;
+}
+
+.wrap-input-8 .input~.focus-border:before,
+.wrap-input-8 .input~.focus-border:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color:
+        #6c5dd3;
+    transition: 0.3s;
+}
+
+.wrap-input-8 .input~.focus-border:after {
+    top: auto;
+    bottom: 0;
+    left: auto;
+    right: 0;
+}
+
+.wrap-input-8 .input~.focus-border i:before,
+.wrap-input-8 .input~.focus-border i:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 0;
+    background-color:
+        #6c5dd3;
+    transition: 0.4s;
+}
+
+.wrap-input-8 .input~.focus-border i:after {
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: 0;
+}
+
+.wrap-input-8 .input:focus~.focus-border:before,
+.wrap-input-8 .input:focus~.focus-border:after {
+    width: 100%;
+    transition: 0.3s;
+}
+
+.wrap-input-8 .input:focus~.focus-border i:before,
+.wrap-input-8 .input:focus~.focus-border i:after {
+    height: 100%;
+    transition: 0.4s;
+}
+
+input[type='submit'] {
+    margin-bottom: 0px;
+}
+
+input[type='text'] {
+    margin-top: 0px;
+}
+
+.btn-71,
+.btn-71 *,
+.btn-71 :after,
+.btn-71 :before,
+.btn-71:after,
+.btn-71:before {
+    border: 0 solid;
+    box-sizing: border-box;
+}
+
+.btn-71 {
+    -webkit-tap-highlight-color:
+        transparent;
+    -webkit-appearance: button;
+    background-color:
+        #000;
+    background-image: none;
+    color:
+        #fff;
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0;
+    -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+    padding: 0;
+}
+
+.btn-71:disabled {
+    cursor: default;
+}
+
+.btn-71:-moz-focusring {
+    outline: auto;
+}
+
+.btn-71 svg {
+    display: block;
+    vertical-align: middle;
+}
+
+.btn-71 [hidden] {
+    display: none;
+}
+
+.btn-71 {
+    border: 1px solid;
+    border-radius: 999px;
+    box-sizing: border-box;
+    display: block;
+    font-weight: 900;
+    overflow: hidden;
+    padding: 1.2rem 3rem;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.btn-71:before {
+    --opacity: 0.2;
+    aspect-ratio: 1;
+    background:
+        #fff;
+    border-radius: 50%;
+    content: "";
+    left: 50%;
+    opacity: var(--opacity);
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 100%;
+    z-index: -1;
+}
+
+.btn-71:hover:before {
+    -webkit-animation: enlarge 1s forwards;
+    animation: enlarge 1s forwards;
+}
+
+@-webkit-keyframes enlarge {
+    to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(4);
+    }
+}
+
+@keyframes enlarge {
+    to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(4);
+    }
+}
